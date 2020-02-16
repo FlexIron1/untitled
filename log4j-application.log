@@ -1,0 +1,50 @@
+2020-02-16 19:36:13 DEBUG ParsingHTMLpage:22 - Exception
+java.net.MalformedURLException: no protocol: 1
+	at java.net.URL.<init>(URL.java:600)
+	at java.net.URL.<init>(URL.java:497)
+	at java.net.URL.<init>(URL.java:446)
+	at com.example.impl.DownloadHTMLpageImpl.downloadHTMLpage(DownloadHTMLpageImpl.java:20)
+	at com.example.RunApplicationpplication.main(RunApplication.java:19)
+2020-02-16 19:36:41 INFO  ParsingHTMLpage:22 - Exception
+java.net.MalformedURLException: no protocol: d
+	at java.net.URL.<init>(URL.java:600)
+	at java.net.URL.<init>(URL.java:497)
+	at java.net.URL.<init>(URL.java:446)
+	at com.example.impl.DownloadHTMLpageImpl.downloadHTMLpage(DownloadHTMLpageImpl.java:20)
+	at com.example.RunApplicationpplication.main(RunApplication.java:19)
+2020-02-16 19:37:30 DEBUG ParsingHTMLpage:22 - Exception
+java.net.MalformedURLException: no protocol: в
+	at java.net.URL.<init>(URL.java:600)
+	at java.net.URL.<init>(URL.java:497)
+	at java.net.URL.<init>(URL.java:446)
+	at com.example.impl.DownloadHTMLpageImpl.downloadHTMLpage(DownloadHTMLpageImpl.java:20)
+	at com.example.RunApplicationpplication.main(RunApplication.java:19)
+2020-02-16 19:40:42 ERROR ParsingHTMLpage:22 - This address does not exist
+java.net.MalformedURLException: no protocol: ds
+	at java.net.URL.<init>(URL.java:600)
+	at java.net.URL.<init>(URL.java:497)
+	at java.net.URL.<init>(URL.java:446)
+	at com.example.impl.DownloadHTMLpageImpl.downloadHTMLpage(DownloadHTMLpageImpl.java:20)
+	at com.example.RunApplicationpplication.main(RunApplication.java:19)
+2020-02-16 19:41:48 ERROR ParsingHTMLpage:22 - This address does not exist
+java.net.MalformedURLException: no protocol: 3
+	at java.net.URL.<init>(URL.java:600)
+	at java.net.URL.<init>(URL.java:497)
+	at java.net.URL.<init>(URL.java:446)
+	at com.example.impl.DownloadHTMLpageImpl.downloadHTMLpage(DownloadHTMLpageImpl.java:20)
+	at com.example.RunApplicationpplication.main(RunApplication.java:19)
+2020-02-16 19:42:30 ERROR ParsingHTMLpage:22 - This address does not exist
+java.net.MalformedURLException: no protocol: 
+	at java.net.URL.<init>(URL.java:600)
+	at java.net.URL.<init>(URL.java:497)
+	at java.net.URL.<init>(URL.java:446)
+	at com.example.impl.DownloadHTMLpageImpl.downloadHTMLpage(DownloadHTMLpageImpl.java:20)
+	at com.example.RunApplicationpplication.main(RunApplication.java:19)
+2020-02-16 19:44:44 ERROR ParsingHTMLpage:22 - This address does not exist
+java.net.MalformedURLException: no protocol: 
+	at java.net.URL.<init>(URL.java:600)
+	at java.net.URL.<init>(URL.java:497)
+	at java.net.URL.<init>(URL.java:446)
+	at com.example.impl.DownloadHTMLpageImpl.downloadHTMLpage(DownloadHTMLpageImpl.java:20)
+	at com.example.RunApplicationpplication.main(RunApplication.java:19)
+2020-02-16 19:45:03 DEBUG ParsingHTMLpage:30 - The file is empty

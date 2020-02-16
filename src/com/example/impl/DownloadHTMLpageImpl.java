@@ -1,7 +1,9 @@
 package com.example.impl;
 
 import com.example.servise.DownloadHTMLpage;
-import org.jsoup.Connection;
+import com.example.servise.ParsingHTMLpage;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.net.MalformedURLException;
@@ -10,34 +12,38 @@ import java.util.Scanner;
 
 
 public class DownloadHTMLpageImpl implements DownloadHTMLpage {
+    private Logger logger = Logger.getLogger(ParsingHTMLpage.class.getName());
 
+
+    /**
+     * @throws IOException
+     * The downloadPage method accepts an HTTP request as input and downloads an HTML page
+     * to a local computer disk.
+     * Application guide: after starting the application, you must specify the address
+     * and file name (how you want to save it on the local disk), after which the
+     * countingUniqueWordsInPage method will start working.
+     *
+     */
     @Override
-    public void downloadHTMLpage(String urlD) throws MalformedURLException {
-        URL url = new URL(urlD);
-        Scanner scanner = new Scanner(System.in);
-        BufferedWriter writer;
-        BufferedReader reader = null;
+    public void downloadPage(String urlPage) throws IOException {
+        URL url = null;
         try {
-            reader = new BufferedReader(
-                    new InputStreamReader(url.openStream()));
-        } catch (IOException ie) {
-            System.out.println("Данный адрес не существует");
+            url = new URL(urlPage);
+        } catch (MalformedURLException e) {
+            logger.log(Level.ERROR, "This address does not exist", e);
+            System.out.println("This address does not exist");
+            System.exit(1);
         }
-        try {
-            writer = new BufferedWriter(new FileWriter(scanner.next() + ".html"));
-            String line;
-            if (reader!=null) {
-                while ((line = reader.readLine()) != null) {
-                    writer.write(line);
-                }
-            }
-            else {
-                System.out.println(new NullPointerException());
-            }
-            System.out.println("Page downloaded.");
-        } catch (IOException e) {
-            e.printStackTrace();
+        Scanner scanner = new Scanner(System.in);
+        BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(url.openStream()));
+        System.out.println("Enter file name");
+        BufferedWriter writer = new BufferedWriter(new FileWriter(scanner.next() + ".html"));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            writer.write(line);
+        }
+        System.out.println("Page downloaded.");
         }
 
     }
-}
